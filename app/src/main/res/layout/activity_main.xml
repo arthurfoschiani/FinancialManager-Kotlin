@@ -7,86 +7,114 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/totalIncomeTextView"
+        android:id="@+id/textHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Receita Total:"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        android:text="Aqui você tem o controle da sua vida financeira"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/totalIncomeValueTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="0dp"
-        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:text="R$ 200,00"
+        android:textColor="#03A9F4"
+        android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/totalIncomeTextView"
-        app:layout_constraintTop_toTopOf="@+id/totalIncomeTextView" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textHeader" />
 
     <TextView
-        android:id="@+id/totalExpenseTextView"
+        android:id="@+id/totalIncomeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Despesa Total:"
-        android:textSize="18sp"
+        android:text="Receita Total"
+        android:textColor="#9F9F9F"
+        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/totalIncomeTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/totalIncomeValueTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/totalExpenseValueTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="0dp"
-        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:text="R$ 200,00"
+        android:textColor="#E91E63"
+        android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/totalExpenseTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/totalIncomeTextView" />
 
     <TextView
-        android:id="@+id/balanceTextView"
+        android:id="@+id/totalExpenseTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Saldo:"
-        android:textSize="24sp"
+        android:text="Despesa Total"
+        android:textColor="#9F9F9F"
+        android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/totalExpenseTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/totalExpenseValueTextView" />
 
     <TextView
         android:id="@+id/balanceValueTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="0dp"
-        android:textSize="24sp"
+        android:layout_marginTop="20dp"
+        android:text="R$ 0,00"
+        android:textColor="#4CAF50"
+        android:textSize="36sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/balanceTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/totalExpenseTextView" />
+
+    <TextView
+        android:id="@+id/balanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#9F9F9F"
+        android:text="Saldo"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balanceValueTextView" />
 
     <Button
         android:id="@+id/viewTransactionsButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="#00003C"
+        android:fontFamily="sans-serif"
+        android:padding="12dp"
         android:text="Visualizar transações"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@+id/addTransactionButton" />
 
     <Button
         android:id="@+id/addTransactionButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="#00003C"
+        android:fontFamily="sans-serif"
+        android:padding="12dp"
         android:text="Adicionar nova transação"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

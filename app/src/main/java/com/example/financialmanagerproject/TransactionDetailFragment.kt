@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.financialmanagerproject.databinding.ActivityTransactionsListBinding
 import com.example.financialmanagerproject.databinding.FragmentTransactionDetailBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
@@ -21,9 +20,10 @@ class TransactionDetailFragment : BottomSheetDialogFragment() {
 
         transaction = arguments?.getSerializable("transaction") as Transaction?
 
-        binding.tvDescription.text = transaction?.description
-        binding.tvAmount.text = transaction?.value.toString()
-        binding.tvType.text = transaction?.type.toString()
+        binding.titleText.text = transaction?.title
+        binding.descriptionText.text = transaction?.description
+        binding.valueText.text = getString(R.string.currency_format, transaction?.value)
+        binding.typeText.text = transaction?.type.toString()
 
         return binding.root
     }

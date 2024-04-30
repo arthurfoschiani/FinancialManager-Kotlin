@@ -33,9 +33,9 @@ class MainActivity : AppCompatActivity() {
         var totalExpense = 0.0
 
         for (transaction in transactionsList) {
-            if (transaction.type == TransactionType.INCOME) {
+            if (transaction.type == TransactionType.RECEITA) {
                 totalIncome += transaction.value
-            } else if (transaction.type == TransactionType.EXPENSE) {
+            } else if (transaction.type == TransactionType.DESPESA) {
                 totalExpense += transaction.value
             }
         }
@@ -51,10 +51,11 @@ class MainActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == 1 && resultCode == RESULT_OK) {
             data?.let {
+                val title = it.getStringExtra("title") ?: ""
                 val description = it.getStringExtra("description") ?: ""
                 val value = it.getDoubleExtra("value", 0.0)
                 val type = TransactionType.valueOf(it.getStringExtra("type") ?: "INCOME")
-                val newTransaction = Transaction(description, value, type)
+                val newTransaction = Transaction(title, description, value, type)
                 transactionsList.add(newTransaction)
                 updateUI()
 

@@ -6,32 +6,37 @@
     android:padding="16dp">
 
         <TextView
-            android:id="@+id/textViewDescription"
+            android:id="@+id/textViewType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RECEITA"
+            android:textColor="#FF9800"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textViewAmount"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toStartOf="@id/textViewAmount"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewType"
+            app:layout_constraintEnd_toStartOf="@+id/textViewAmount"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="Descrição da Transação" />
+            android:paddingLeft="8dp"
+            android:text="Titulo da Transação"
+            android:textStyle="bold"
+            android:textColor="#9F9F9F" />
 
         <TextView
             android:id="@+id/textViewAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toStartOf="@id/textViewType"
-            app:layout_constraintStart_toEndOf="@id/textViewDescription"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="R$ 100,00" />
-
-        <TextView
-            android:id="@+id/textViewType"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/textViewAmount"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="RECEITA" />
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:text="R$ 100,00" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

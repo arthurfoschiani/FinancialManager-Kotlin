@@ -26,7 +26,7 @@ class TransactionsAdapter(
         private val onTransactionClick: (Transaction) -> Unit
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(transaction: Transaction) {
-            binding.textViewDescription.text = transaction.description
+            binding.textViewTitle.text = transaction.title
             binding.textViewAmount.text = transaction.value.toString()
             binding.textViewType.text = transaction.type.name
             itemView.setOnClickListener {

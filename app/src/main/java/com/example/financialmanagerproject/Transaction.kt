@@ -3,10 +3,11 @@ package com.example.financialmanagerproject;
 import java.io.Serializable
 
 enum class TransactionType {
-    INCOME, EXPENSE
+    RECEITA, DESPESA
 }
 
-data class Transaction(
+data class Transaction (
+    val title: String,
     val description: String,
     val value: Double,
     val type: TransactionType
