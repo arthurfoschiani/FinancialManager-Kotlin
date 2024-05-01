@@ -2,7 +2,6 @@ package com.example.financialmanagerproject
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.financialmanagerproject.databinding.ActivityTransactionsListBinding
 
@@ -31,11 +30,5 @@ class TransactionsListActivity : AppCompatActivity() {
         }
         binding.recyclerViewTransactions.layoutManager = LinearLayoutManager(this)
         binding.recyclerViewTransactions.adapter = transactionsAdapter
-    }
-
-    fun updateTransactions(newTransactions: List<Transaction>) {
-        transactionsList.clear()
-        transactionsList.addAll(newTransactions)
-        transactionsAdapter.notifyDataSetChanged()
     }
 }
